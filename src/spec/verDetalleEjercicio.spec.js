@@ -1,7 +1,7 @@
 import { ejerciciosPruebas } from "../constantes";
+let ejercicio = ejerciciosPruebas[0];
 describe("Ver detalle de ejercicio", () => {
     it("Devuelve el detalle completo de un ejercicio", () => {
-      let ejercicio = ejerciciosPruebas[0];
       expect(ejercicio.getDetalle()).toEqual('detalle1');
     });
     it("Devuelve el detalle completo de otro ejercicio", () => {
@@ -12,19 +12,16 @@ describe("Ver detalle de ejercicio", () => {
 );
 describe("Ver titulo de ejercicio", () => {
   it("Devuelve el titulo de un ejercicio", () => {
-    let ejercicio = ejerciciosPruebas[0];
     expect(ejercicio.getTitulo()).toEqual('Numeros Primos');
   });
 });
 describe("Ver categoria de ejercicio", () => {
   it("Devuelve la categoria de un ejercicio", () => {
-    let ejercicio = ejerciciosPruebas[0];
     expect(ejercicio.getCategoria()).toEqual('Numeros');
   });
-});
+}); 
 describe("Ver imagen de ejercicio", () => {
   it("Devuelve la imagen de un ejercicio", () => {
-    let ejercicio = ejerciciosPruebas[0];
     expect(ejercicio.getImagen()).toEqual("1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph");
   });
 });
