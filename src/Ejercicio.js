@@ -1,9 +1,10 @@
 class Ejercicio{
-    constructor(titulo="",categoria="",imagen="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph",resumen=""){
+    constructor(titulo="",categoria="",imagen="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph",resumen="", detalle=""){
         this.titulo=titulo;
         this.categoria=categoria;
         this.imagen=imagen;
         this.resumen=resumen;
+        this.detalle=detalle;
     }
     getTitulo(){
         return this.titulo;
@@ -18,7 +19,7 @@ class Ejercicio{
         return this.resumen;
     }
     getDetalle(){ 
-        return 'detalle1';
+        return this.detalle;
     }
     validarTitulo(){
         return this.titulo != "";
