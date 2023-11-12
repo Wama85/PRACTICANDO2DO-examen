@@ -28,17 +28,16 @@ describe("Buscar ejecicio por nombre", () => {
 
       it("Verifica que la imagen sea visible de las coincidencias del ejercicio buscado", () => {
         escribirEjercicioBuscado("Numeros Primos");
-        
         cy.get("#marcoimagen img").should('be.visible');
   
       });
       it("Encuentra los links de las imagenes predeterminadas que coincidan con el ejercicio buscado", () => {
         escribirEjercicioBuscado("Numeros Primos");
-          cy.get("#marcoimagen img").should('have.attr','src',mostrarImagen(IMAGENPREDETERMINADA));
+        cy.get("#marcoimagen img").should('have.attr','src',mostrarImagen(IMAGENPREDETERMINADA));
           
         });
         it("Encuentra los links de las imagenes de las coincidencias del ejercicio buscado", () => {
-          escribirEjercicioBuscado("Numeros Romanos");
+        escribirEjercicioBuscado("Numeros Romanos");
         cy.get("#marcoimagen img").should('have.attr','src',mostrarImagen('10PUZY7ai9akJ5VAGzWbPNKGjQXBQ4-f9'));
   
       });
