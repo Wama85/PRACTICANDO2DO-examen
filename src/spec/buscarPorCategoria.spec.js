@@ -13,8 +13,15 @@ describe("Buscar ejercicios por categoria", () => {
 
     it("Devuelve las coincidencias del ejercicio para la categoria Numeros", () => {
         let catalogo=new Catalogo(ejerciciosPruebas);
-        expect(catalogo.buscarEjerciosPorCategoria("Numeros")).toEqual(ejerciciosPruebas);
+        expect(catalogo.buscarEjerciosPorCategoria("Numeros")).toEqual(ejerciciosPruebas.filter(ejer=>ejer.getCategoria()=="Numeros"));
+    });  
+    
+    it("Devuelve las coincidencias del ejercicio para la categoria Arboles", () => {
+        let catalogo=new Catalogo(ejerciciosPruebas);
+        expect(catalogo.buscarEjerciosPorCategoria("Arboles")).toEqual(ejerciciosPruebas.filter(ejer=>ejer.getCategoria()=="Arboles"));
     });
+
+
    
   }
 );

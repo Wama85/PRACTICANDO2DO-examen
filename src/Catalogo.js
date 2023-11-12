@@ -34,9 +34,12 @@ class Catalogo{
 
     buscarEjerciosPorCategoria(categoria){
         let listaCoincidencias=[]
-        if (categoria!=undefined){
-            listaCoincidencias=this.lista;
+        this.lista.forEach((ejer) =>{
+         if(ejer.getCategoria()==categoria){
+            listaCoincidencias.push(ejer);
+            }
         }
+        );
         return listaCoincidencias;
     }
 
