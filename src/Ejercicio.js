@@ -17,6 +17,9 @@ class Ejercicio{
     getResumen(){
         return this.resumen;
     }
+    getDetalle(){ 
+        return 'detalle1';
+    }
     validarTitulo(){
         return this.titulo != "";
     }
