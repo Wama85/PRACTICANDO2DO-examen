@@ -135,7 +135,7 @@ footer{
   color: white;
 }
 
-input[type=text],input[type=search],select, textarea{
+input[type=text],input[type=password], input[type=search],select, textarea{
     width: 100%;
     padding: 10px 0px;
     display: inline-block;

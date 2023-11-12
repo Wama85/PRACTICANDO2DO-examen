@@ -80,9 +80,9 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
         <label>Username:</label>
         <input type="text" placeholder="Ingrese nombre de usuario" id="txtusername">
         <label>Password:</label>
-        <input type="text" placeholder="Ingrese contraseña" id="txtpassword">
+        <input type="password" placeholder="Ingrese contraseña" id="txtpassword">
         <label>Repetir Password:</label>
-        <input type="text" id="txtreppass"  placeholder="Repita Contraseña">
+        <input type="password" id="txtreppass"  placeholder="Repita Contraseña">
        
         <input type="submit" id="btncrearuser" value="CREAR">
        
