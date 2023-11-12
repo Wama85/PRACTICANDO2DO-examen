@@ -10,6 +10,11 @@ describe("Buscar ejercicios por categoria", () => {
         let catalogo=new Catalogo([ejerciciosPruebas[0]]);
         expect(catalogo.buscarEjerciosPorCategoria("Numeros")).toEqual([ejerciciosPruebas[0]]);
     });
+
+    it("Devuelve las coincidencias del ejercicio para la categoria Numeros", () => {
+        let catalogo=new Catalogo(ejerciciosPruebas);
+        expect(catalogo.buscarEjerciosPorCategoria("Numeros")).toEqual(ejerciciosPruebas);
+    });
    
   }
 );
