@@ -16,3 +16,9 @@ describe("Ver titulo de ejercicio", () => {
     expect(ejercicio.getTitulo()).toEqual('Numeros Primos');
   });
 });
+describe("Ver categoria de ejercicio", () => {
+  it("Devuelve la categoria de un ejercicio", () => {
+    let ejercicio = ejerciciosPruebas[0];
+    expect(ejercicio.getCategoria()).toEqual('Numeros');
+  });
+});
