@@ -1,4 +1,4 @@
-import { Ejercicio } from "../Ejercicio";
+import { Ejercicio } from "../models/Ejercicio";
 import * as constantes from "../constantes";
 function getImagenEjercicio(titulo,categoria,imagen){
     let ejercicio= new Ejercicio(titulo,categoria,imagen);

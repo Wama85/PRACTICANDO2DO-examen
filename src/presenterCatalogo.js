@@ -1,5 +1,5 @@
-import { Catalogo } from "./Catalogo.js";
-import { Ejercicio } from "./Ejercicio.js";
+import { Catalogo } from "./models/Catalogo.js";
+import { Ejercicio } from "./models/Ejercicio.js";
 import { ejercicios } from "./dataCatalogo.js";
 import { URLIMAGENES,CERO } from "./constantes.js";
 import {crearHTMLejercicios} from "./cargarVistas.js"

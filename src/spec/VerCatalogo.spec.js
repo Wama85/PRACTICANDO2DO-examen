@@ -1,6 +1,6 @@
-import { Catalogo } from "../Catalogo.js";
+import { Catalogo } from "../models/Catalogo.js";
 import { ejerciciosPruebas } from "../constantes.js";
-import {Ejercicio} from "../Ejercicio.js";
+import {Ejercicio} from "../models/Ejercicio.js";
 
 function getTituloEjercicio(titulo){
   let ejercicio= new Ejercicio(titulo);

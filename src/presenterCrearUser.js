@@ -1,4 +1,4 @@
-import {Usuario} from "./Usuario";
+import {Usuario} from "./models/Usuario";
 const txtusername=document.getElementById("txtusername");
 const txtreppass=document.getElementById("txtreppass");
 const txtpassword=document.getElementById("txtpassword");

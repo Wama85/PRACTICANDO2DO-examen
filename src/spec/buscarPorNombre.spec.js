@@ -1,5 +1,5 @@
-import { Ejercicio } from "../Ejercicio";
-import { Catalogo } from "../Catalogo";
+import { Ejercicio } from "../models/Ejercicio";
+import { Catalogo } from "../models/Catalogo";
 import { ejerciciosPruebas } from "../constantes";
 
 function buscarPorNombre(ejercicios,nombreBuscado){

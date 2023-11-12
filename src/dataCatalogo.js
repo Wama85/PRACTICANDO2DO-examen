@@ -1,4 +1,4 @@
-import {Ejercicio} from "./Ejercicio";
+import {Ejercicio} from "./models/Ejercicio";
 const ejercicios=[
     new Ejercicio(
         "Numeros Primos",

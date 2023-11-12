@@ -1,5 +1,5 @@
 import { ejerciciosPruebas } from "../constantes";
-import { Catalogo } from "../Catalogo";
+import { Catalogo } from "../models/Catalogo";
 
 describe("Buscar ejercicios por categoria", () => {
     it("Devuelve la lista vacia sin coincidencias", () => {

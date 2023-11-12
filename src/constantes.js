@@ -1,4 +1,4 @@
-import { Ejercicio } from "./Ejercicio";
+import { Ejercicio } from "./models/Ejercicio";
 const  IMAGENPREDETERMINADA="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph";
 const URLIMAGENES="https://drive.google.com/uc?export=download&id=";
 const CERO=0;
