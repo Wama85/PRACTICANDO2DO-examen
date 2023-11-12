@@ -1,4 +1,3 @@
-import { Ejercicio } from "../Ejercicio";
 import { ejerciciosPruebas } from "../constantes";
 describe("Ver detalle de ejercicio", () => {
     it("Devuelve el detalle completo de un ejercicio", () => {
@@ -11,3 +10,9 @@ describe("Ver detalle de ejercicio", () => {
     });
   }
 );
+describe("Ver titulo de ejercicio", () => {
+  it("Devuelve el titulo de un ejercicio", () => {
+    let ejercicio = ejerciciosPruebas[0];
+    expect(ejercicio.getTitulo()).toEqual('Numeros Primos');
+  });
+});
