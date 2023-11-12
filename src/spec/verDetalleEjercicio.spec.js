@@ -22,3 +22,9 @@ describe("Ver categoria de ejercicio", () => {
     expect(ejercicio.getCategoria()).toEqual('Numeros');
   });
 });
+describe("Ver imagen de ejercicio", () => {
+  it("Devuelve la imagen de un ejercicio", () => {
+    let ejercicio = ejerciciosPruebas[0];
+    expect(ejercicio.getImagen()).toEqual("1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph");
+  });
+});
