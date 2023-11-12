@@ -32,5 +32,13 @@ class Catalogo{
         return coincidencias;
     }
 
+    buscarEjerciosPorCategoria(categoria){
+        let listaCoincidencias=[]
+        if (categoria!=undefined){
+            listaCoincidencias=this.lista;
+        }
+        return listaCoincidencias;
+    }
+
 };
 export {Catalogo};
