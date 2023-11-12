@@ -1,6 +1,10 @@
 import { ejercicios } from "../../src/dataCatalogo";
+import { URLIMAGENES, IMAGENPREDETERMINADA } from "../../src/constantes";
 function buscarEjercicio(titulo){
  return ejercicios.filter(ejercicio=>ejercicio.getTitulo()==titulo)[0];
+}
+function mostrarImagen(){
+  return URLIMAGENES+IMAGENPREDETERMINADA;
 }
 describe("Buscar ejecicio por nombre", () => {
     it("Encuentra los titulos de las coincidencias del ejercicio buscado", () => {
@@ -33,7 +37,7 @@ describe("Buscar ejecicio por nombre", () => {
         cy.get("#menubuscarejer").click();
         cy.get("#txtbuscar").type("Numeros Primos");
         cy.get("#txtbuscar").type("{enter}");
-        cy.get("#marcoimagen img").should('have.attr','src','https://drive.google.com/uc?export=download&id=1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph');
+        cy.get("#marcoimagen img").should('have.attr','src',mostrarImagen());
   
       });
   });
