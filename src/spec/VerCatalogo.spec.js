@@ -44,21 +44,20 @@ describe("Ver resumen del ejercicio", () => {
       });
   }
 );
-
+function getIdEjercicio(id=0){
+  let ejercicio= new Ejercicio();  
+  ejercicio.setId(id);
+  return ejercicio.getId();
+}
 describe("Ver id del ejercicio", () => {
   it("Devuelve el id de un ejercicio ", () => {
-    let ejercicio= new Ejercicio();  
-    ejercicio.setId(1);
-    expect(ejercicio.getId()).toEqual(1);
+    expect(getIdEjercicio(1)).toEqual(1);
   });
   it("Devuelve el id de otro ejercicio ", () => {
-    let ejercicio= new Ejercicio();  
-    ejercicio.setId(2);
-    expect(ejercicio.getId()).toEqual(2);
+    expect(getIdEjercicio(2)).toEqual(2);
   });
   it("Devuelve el id por defecto de ejercicio sin id ", () => {
-    let ejercicio= new Ejercicio();  
-    expect(ejercicio.getId()).toEqual(0);
+    expect(getIdEjercicio()).toEqual(0);
   });
 }
 );
