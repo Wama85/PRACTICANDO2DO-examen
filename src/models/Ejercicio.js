@@ -1,10 +1,11 @@
 class Ejercicio{
-    constructor(titulo="",categoria="",imagen="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph",resumen="", detalle=""){
+    constructor(titulo="",categoria="",imagen="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph",resumen="", detalle="",id=0){
         this.titulo=titulo;
         this.categoria=categoria;
         this.imagen=imagen;
         this.resumen=resumen;
         this.detalle=detalle;
+        this.id=id
     }
     getTitulo(){
         return this.titulo;

@@ -56,6 +56,10 @@ describe("Ver id del ejercicio", () => {
     ejercicio.setId(2);
     expect(ejercicio.getId()).toEqual(2);
   });
+  it("Devuelve el id por defecto de ejercicio sin id ", () => {
+    let ejercicio= new Ejercicio();  
+    expect(ejercicio.getId()).toEqual(0);
+  });
 }
 );
 
