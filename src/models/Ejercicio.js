@@ -21,6 +21,9 @@ class Ejercicio{
     getDetalle(){ 
         return this.detalle;
     }
+    getId(){ 
+        return 1;
+    }
     validarTitulo(){
         return this.titulo != "";
     }

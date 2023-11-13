@@ -45,6 +45,16 @@ describe("Ver resumen del ejercicio", () => {
   }
 );
 
+describe("Ver id del ejercicio", () => {
+  it("Devuelve el id de un ejercicio ", () => {
+    let ejercicio= new Ejercicio();  
+    expect(ejercicio.getId()).toEqual(1);
+  });
+
+}
+);
+
+
 function verificarListaVaciaCatalogo(ejerciciosCatalogo){
   let catalogo= new Catalogo(ejerciciosCatalogo);
   return catalogo.verificarListaVacia();
