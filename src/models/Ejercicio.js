@@ -22,7 +22,10 @@ class Ejercicio{
         return this.detalle;
     }
     getId(){ 
-        return 1;
+        return this.id;
+    }
+    setId(id){ 
+        this.id=id;
     }
     validarTitulo(){
         return this.titulo != "";

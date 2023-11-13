@@ -48,9 +48,14 @@ describe("Ver resumen del ejercicio", () => {
 describe("Ver id del ejercicio", () => {
   it("Devuelve el id de un ejercicio ", () => {
     let ejercicio= new Ejercicio();  
+    ejercicio.setId(1);
     expect(ejercicio.getId()).toEqual(1);
   });
-
+  it("Devuelve el id de otro ejercicio ", () => {
+    let ejercicio= new Ejercicio();  
+    ejercicio.setId(2);
+    expect(ejercicio.getId()).toEqual(2);
+  });
 }
 );
 
