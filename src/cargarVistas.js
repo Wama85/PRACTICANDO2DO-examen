@@ -4,7 +4,9 @@ const contenedor = document.getElementById("contenido");
 function crearHTMLejercicios(listaEjercicios, contenedor) {
     contenedor.innerHTML = "";
     let ejerciciosHTML = ``;
+    let i=1;
     listaEjercicios.forEach((ejercicio) => {
+      ejercicio.setId(i);
       let imagen=URLIMAGENES+ejercicio.getImagen();
       ejerciciosHTML += `
           <div id="imgdetallecatalog">
@@ -13,9 +15,10 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
             </div>
           </div>
           <div id="contenidodetallecatalogo">
-            <h3>${ejercicio.getTitulo()}</h3>
+            <h3 id="ejercicio-${ejercicio.getId()}">${ejercicio.getTitulo()}</h3>
             <p>${ejercicio.getResumen()}<span>Ver mas</span></p>
           </div>`;
+          i++;
     });
     contenedor.innerHTML += ejerciciosHTML;
   }
