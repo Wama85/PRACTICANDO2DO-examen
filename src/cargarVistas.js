@@ -11,7 +11,7 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
       ejerciciosHTML += `
           <div id="imgdetallecatalog">
             <div id="marcoimagen">
-              <img src=${imagen} width="150px" height="100px">
+              <img id="imagen-ejer${ejercicio.getId()}" src=${imagen} width="150px" height="100px">
             </div>
           </div>
           <div id="contenidodetallecatalogo">
