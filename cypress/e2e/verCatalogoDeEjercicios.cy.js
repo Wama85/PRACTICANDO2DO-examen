@@ -1,5 +1,5 @@
-
-
+import { ejercicios } from "../../src/dataCatalogo";
+import { URLIMAGENES,IMAGENPREDETERMINADA } from "../../src/constantes";
 describe("Ver catalogo de ejercicio", () => {
     beforeEach(() => {
         cy.visit("/");
@@ -9,12 +9,12 @@ describe("Ver catalogo de ejercicio", () => {
         cy.get("#ejercicio-1").should("contain","Numeros Primos")
     });
     it("Devuelve el resumen del ejericicio ATDD",()=>{
-        cy.get("#ejercicio-1 + p").should("contain","Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.")
+        cy.get("#ejercicio-1 + p").should("contain",ejercicios.filter(ejer=>ejer.getTitulo()=="Numeros Primos")[0].getResumen());
     });
     it("Verifica que la iamgen sea visible el del ejericicio ATDD",()=>{
         cy.get("#imagen-ejer1").should("be.visible")
     });
     it("Devuelve el link  del ejericicio ATDD",()=>{
-        cy.get("#imagen-ejer1").should("have.attr","src","https://drive.google.com/uc?export=download&id=1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph")
+        cy.get("#imagen-ejer1").should("have.attr","src",URLIMAGENES+IMAGENPREDETERMINADA)
     });
   });
