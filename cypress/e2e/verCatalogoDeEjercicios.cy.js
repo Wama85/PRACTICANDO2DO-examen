@@ -14,4 +14,9 @@ describe("Ver catalogo de ejercicio", () => {
         cy.get("#menucatalogo").click()
         cy.get("#imagen-ejer1").should("be.visible")
     });
+    it("Devuelve el link  del ejericicio ATDD",()=>{
+        cy.visit("/");
+        cy.get("#menucatalogo").click()
+        cy.get("#imagen-ejer1").should("have.attr","src","https://drive.google.com/uc?export=download&id=1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph")
+    });
   });
