@@ -1,37 +1,37 @@
 describe("Crear Ejercicio", () => {
-  it("Verificar que los campos tengan información", () => {
+  beforeEach(() => {
     cy.visit("/");
     cy.get("#menuacregarejer").click();
+  });
+
+  function crearEjercicio(nombre,categoria,detalle){
+    cy.get("#txtNombre").type(nombre); 
+    cy.get("#txtNombre").should('have.value',nombre); 
+    cy.get("#selecCategoria").select(categoria); 
+    cy.get("#txtDetalle").type(detalle); 
+    cy.get("#txtDetalle").invoke('val').should('contain',detalle); 
+    cy.get("#crearregistro").click();
+  }
+
+  it("Verificar que los campos tengan información", () => {
+   
     cy.get("#crearregistro").click();
     cy.on('window:alert', (str) => {
-      expect(str).to.equal(`Todos los campos son obligatorios`)
+    expect(str).to.equal(`Todos los campos son obligatorios`)
     })
   });
 
     it("Registrar un nuevo ejercicio", () => {
-      cy.visit("/");
-      cy.get("#menuacregarejer").click();
-      cy.get("#txtNombre").type("Romanos II"); 
-      cy.get("#txtNombre").should('have.value','Romanos II'); 
-      cy.get("#selecCategoria").select("Geometría"); 
-      cy.get("#txtDetalle").type("Perro salchicha"); 
-      cy.get("#txtDetalle").invoke('val').should('contain','Perro salchicha'); 
-      cy.get("#crearregistro").click();
-
+    
+      crearEjercicio("Romanos II","Geometría","Perro salchicha")
       cy.on('window:alert', (str) => {
-        expect(str).to.equal(`Datos subidos correctamente`)
+       expect(str).to.equal(`Datos subidos correctamente`)
       })
     });
 
     it("Verificar que el ejercicio se ha creado con éxito", () => {
-      cy.visit("/");
-      cy.get("#menuacregarejer").click();
-      cy.get("#txtNombre").type("Romanos II"); 
-      cy.get("#txtNombre").should('have.value','Romanos II'); 
-      cy.get("#selecCategoria").select("Geometría"); 
-      cy.get("#txtDetalle").type("Perro salchicha"); 
-      cy.get("#txtDetalle").invoke('val').should('contain','Perro salchicha'); 
-      cy.get("#crearregistro").click();
+     
+      crearEjercicio("Romanos II","Geometría","Perro salchicha")
       cy.get("#menucatalogo").click();
       cy.get("#contenidodetallecatalogo #ejercicio-12").should('contain','Romanos II'); 
     
@@ -39,14 +39,8 @@ describe("Crear Ejercicio", () => {
     });
 
     it("Verificar que el detalle del ejercicio se visualice  correctamente", () => {
-      cy.visit("/");
-      cy.get("#menuacregarejer").click();
-      cy.get("#txtNombre").type("Romanos II"); 
-      cy.get("#txtNombre").should('have.value','Romanos II'); 
-      cy.get("#selecCategoria").select("Geometría"); 
-      cy.get("#txtDetalle").type("Perro salchicha"); 
-      cy.get("#txtDetalle").invoke('val').should('contain','Perro salchicha'); 
-      cy.get("#crearregistro").click();
+     
+      crearEjercicio("Romanos II","Geometría","Perro salchicha")
       cy.get("#menucatalogo").click();
       cy.get("#ejercicio-12 + p").should('contain','Perro salchicha'); 
     
