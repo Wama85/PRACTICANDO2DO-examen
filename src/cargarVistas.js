@@ -63,9 +63,7 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
                                 <option value="Juegos">Juegos</option>
                             </select>
                             <label>Detalle:</label>
-                            <textarea id="txtDetalle" name="txtDetalle" placeholder="Ingresar el detalle del ejercicio">
-
-        </textarea>
+                            <textarea id="txtDetalle" name="txtDetalle" placeholder="Ingresar el detalle del ejercicio"></textarea>
                             <input type="submit" id="crearregistro" value="CREAR">
 
                         </form>
