@@ -32,10 +32,23 @@ describe("Crear Ejercicio", () => {
       cy.get("#txtDetalle").type("Perro salchicha"); 
       cy.get("#txtDetalle").invoke('val').should('contain','Perro salchicha'); 
       cy.get("#crearregistro").click();
-    
-
       cy.get("#menucatalogo").click();
       cy.get("#contenidodetallecatalogo #ejercicio-12").should('contain','Romanos II'); 
+    
+     
+    });
+
+    it("Verificar que el detalle del ejercicio se visualice  correctamente", () => {
+      cy.visit("/");
+      cy.get("#menuacregarejer").click();
+      cy.get("#txtNombre").type("Romanos II"); 
+      cy.get("#txtNombre").should('have.value','Romanos II'); 
+      cy.get("#selecCategoria").select("Geometría"); 
+      cy.get("#txtDetalle").type("Perro salchicha"); 
+      cy.get("#txtDetalle").invoke('val').should('contain','Perro salchicha'); 
+      cy.get("#crearregistro").click();
+      cy.get("#menucatalogo").click();
+      cy.get("#ejercicio-12 + p").should('contain','Perro salchicha'); 
     
      
     });
