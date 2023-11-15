@@ -1,18 +1,12 @@
 describe("Crear usuario", () => {
-  beforeEach(() => {
-    cy.visit("/");
-    cy.get("#menucrearusuario").click();
-  });
-    it("Registrar nombre de usuario", () => {
-      cy.get("#txtusername").type("Perro salchicha"); 
-      cy.get("#txtusername").should('have.value','Perro salchicha'); 
+
+    it("Verifica que los campos del usuario esten llenos", () => {
+      cy.visit("/");
+      cy.get("#menucrearusuario").click();
+      cy.get("#btncrearuser").click();
+      cy.on('window:alert', (str) => {
+      expect(str).to.equal(`Todos los campos son obligatorios o la contraseña no es idéntica`)
+      })
     });
-    it("Registrar password de usuario", () => {
-        cy.get("#txtpassword").type("Perro salchicha"); 
-        cy.get("#txtpassword").should('have.value','Perro salchicha'); 
-      });
-    it("Registrar repetir password de usuario", () => {
-        cy.get("#txtreppass").type("Perro salchicha"); 
-        cy.get("#txtreppass").should('have.value','Perro salchicha'); 
-    });
+
 });
