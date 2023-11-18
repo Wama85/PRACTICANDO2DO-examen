@@ -96,5 +96,9 @@ describe("Guardar la lista", () => {
     let catalogo= new Catalogo();
     expect( catalogo.getEjerciciosDelNavegador()).toEqual([]);
   });
+  it("Devuelve un ejercicio guardado en el navegador", () => {
+    let catalogo= new Catalogo([ejerciciosPruebas[0]]);
+    expect( catalogo.getEjerciciosDelNavegador()).toEqual([ejerciciosPruebas[0]]);
+  });
 }
 );
