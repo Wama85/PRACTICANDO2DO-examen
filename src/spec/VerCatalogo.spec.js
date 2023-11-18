@@ -100,5 +100,9 @@ describe("Guardar la lista", () => {
     let catalogo= new Catalogo([ejerciciosPruebas[0]]);
     expect( catalogo.getEjerciciosDelNavegador()).toEqual([ejerciciosPruebas[0]]);
   });
+  it("Devuelve una lista de ejercicios guardados en el navegador", () => {
+    let catalogo= new Catalogo(ejerciciosPruebas);
+    expect( catalogo.getEjerciciosDelNavegador()).toEqual(ejerciciosPruebas);
+  });
 }
 );
