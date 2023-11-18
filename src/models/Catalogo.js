@@ -43,5 +43,10 @@ class Catalogo{
         return listaCoincidencias;
     }
 
+
+    getEjerciciosDelNavegador(){
+        return [];
+    }
+
 };
 export {Catalogo};

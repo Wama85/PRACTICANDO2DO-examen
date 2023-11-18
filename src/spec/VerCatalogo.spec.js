@@ -91,3 +91,10 @@ describe("Ver ejercicios en el catalogo", () => {
  
   }
 );
+describe("Guardar la lista", () => {
+  it("Devuelve vacio no se guardaron los ejercicios en el navegador", () => {
+    let catalogo= new Catalogo();
+    expect( catalogo.getEjerciciosDelNavegador()).toEqual([]);
+  });
+}
+);
