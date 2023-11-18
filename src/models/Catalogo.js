@@ -4,8 +4,12 @@ import "jest-localstorage-mock";
 class Catalogo{
     constructor(lista=[]){
         this.lista=lista;
-        const objetoJSON = JSON.stringify(lista);
+        this.guardarEjercicios();
+    }
+    guardarEjercicios(){
+        const objetoJSON = JSON.stringify(this.lista);
         localStorage.setItem("listaEjercicios", objetoJSON);
+
     }
     verificarListaVacia(){
         let mensaje="No se tiene ejercicios disponibles"
