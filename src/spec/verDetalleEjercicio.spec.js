@@ -1,3 +1,4 @@
+import "jest-localstorage-mock";
 import { ejerciciosPruebas } from "../constantes";
 let ejercicio = ejerciciosPruebas[0];
 describe("Ver detalle de ejercicio", () => {

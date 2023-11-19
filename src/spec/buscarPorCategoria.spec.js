@@ -1,3 +1,4 @@
+import "jest-localstorage-mock";
 import { ejerciciosPruebas } from "../constantes";
 import { Catalogo } from "../models/Catalogo";
 

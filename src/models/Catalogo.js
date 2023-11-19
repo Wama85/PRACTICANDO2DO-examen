@@ -1,6 +1,6 @@
 import { Ejercicio } from "./Ejercicio";
 import { ejerciciosPruebas } from "../constantes";
-import "jest-localstorage-mock";
+
 class Catalogo{
     constructor(lista=[]){
         this.lista=lista;
@@ -25,7 +25,13 @@ class Catalogo{
     agregarEjercicio(ejercicio){
         this.lista.push(ejercicio);
     }
-
+    convertirDeJsonAEjercicio(){
+        let listaEjercicios=[]
+        this.lista.forEach((ejercicio) => {
+            listaEjercicios.push(new Ejercicio(ejercicio.titulo,ejercicio.categoria,ejercicio.imagen,ejercicio.resumen,ejercicio.detalle,ejercicio.id));
+        });
+        return listaEjercicios;
+    }
     buscarPorNombre(tituloEjercicio){
         let coincidencias=[];
 

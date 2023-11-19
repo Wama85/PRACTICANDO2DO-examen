@@ -21,7 +21,8 @@ function llenarEjercicios() {
     detalleCatalogo.innerHTML += `<p>${catalogo.verificarListaVacia()}</p>`;
     return;
   }
-  crearHTMLejercicios(catalogo.getEjercicios(), detalleCatalogo);
+  // catalogo.convertirDeJsonAEjercicio();
+  crearHTMLejercicios(catalogo.convertirDeJsonAEjercicio(catalogo.getEjerciciosDelNavegador()), detalleCatalogo);
 }
 function mostrarMensajeDeAlerta(mensaje){
   alert(mensaje);

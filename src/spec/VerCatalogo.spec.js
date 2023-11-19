@@ -1,7 +1,7 @@
+import "jest-localstorage-mock";
 import { Catalogo } from "../models/Catalogo.js";
 import { ejerciciosPruebas } from "../constantes.js";
 import {Ejercicio} from "../models/Ejercicio.js";
-
 function getTituloEjercicio(titulo){
   let ejercicio= new Ejercicio(titulo);
   return ejercicio.getTitulo();
