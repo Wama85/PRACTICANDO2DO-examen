@@ -2,7 +2,7 @@ import { Catalogo } from "./models/Catalogo.js";
 import { Ejercicio } from "./models/Ejercicio.js";
 import { ejercicios } from "./dataCatalogo.js";
 import { URLIMAGENES,CERO } from "./constantes.js";
-import {crearHTMLejercicios} from "./cargarVistas.js"
+import {crearHTMLejercicios} from "./cargarVistas.js";
 
 const detalleCatalogo = document.getElementById("detallecatalogo");
 const catalogo = new Catalogo(ejercicios);
@@ -21,7 +21,6 @@ function llenarEjercicios() {
     detalleCatalogo.innerHTML += `<p>${catalogo.verificarListaVacia()}</p>`;
     return;
   }
-  // catalogo.convertirDeJsonAEjercicio();
   crearHTMLejercicios(catalogo.convertirDeJsonAEjercicio(catalogo.getEjerciciosDelNavegador()), detalleCatalogo);
 }
 function mostrarMensajeDeAlerta(mensaje){

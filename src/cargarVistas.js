@@ -1,6 +1,7 @@
 import { URLIMAGENES } from "./constantes"
 const contenedor = document.getElementById("contenido");
 
+
 function crearHTMLejercicios(listaEjercicios, contenedor) {
     contenedor.innerHTML = "";
     let ejerciciosHTML = ``;
