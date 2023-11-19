@@ -93,16 +93,22 @@ describe("Ver ejercicios en el catalogo", () => {
 );
 describe("Guardar la lista", () => {
   it("Devuelve vacio no se guardaron los ejercicios en el navegador", () => {
+    localStorage.clear();
     let catalogo= new Catalogo();
-    expect( catalogo.getEjerciciosDelNavegador()).toEqual([]);
+    catalogo.guardarEjercicios();
+    expect( catalogo.getEjercicios()).toEqual([]);
   });
   it("Devuelve un ejercicio guardado en el navegador", () => {
+    localStorage.clear();
     let catalogo= new Catalogo([ejerciciosPruebas[0]]);
-    expect( catalogo.getEjerciciosDelNavegador()).toEqual([ejerciciosPruebas[0]]);
+    catalogo.guardarEjercicios();
+    expect( catalogo.getEjercicios()).toEqual([ejerciciosPruebas[0]]);
   });
   it("Devuelve una lista de ejercicios guardados en el navegador", () => {
+    localStorage.clear();
     let catalogo= new Catalogo(ejerciciosPruebas);
-    expect( catalogo.getEjerciciosDelNavegador()).toEqual(ejerciciosPruebas);
+    catalogo.guardarEjercicios();
+    expect( catalogo.getEjercicios()).toEqual(ejerciciosPruebas);
   });
 }
 );

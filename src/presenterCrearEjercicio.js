@@ -1,10 +1,12 @@
 import { Ejercicio } from "./models/Ejercicio";
+import { Catalogo } from "./models/Catalogo";
+import { ejercicios } from "./dataCatalogo";
+import { catalogo } from "./presenterCatalogo";
 const txtNombre = document.getElementById("txtNombre");
 const selecCategoria = document.getElementById("selecCategoria");
 const txtDetalle = document.getElementById("txtDetalle");
 const btnregistrar = document.getElementById("crearregistro");
 const contenido=document.getElementById("contenido");
-catalogo= new Catalogo();
 contenido.innerHTML="";
 
 btnregistrar.addEventListener("click", (env) => {
@@ -28,5 +30,5 @@ function mostrarMensajeDeAlerta(mensaje){
     } else {
       mostrarMensajeDeAlerta("Todos los campos son obligatorios");
     }
-
+    console.log(catalogo)
   }

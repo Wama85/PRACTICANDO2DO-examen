@@ -2,7 +2,10 @@ import {Usuario} from "./models/Usuario";
 const txtusername=document.getElementById("txtusername");
 const txtreppass=document.getElementById("txtreppass");
 const txtpassword=document.getElementById("txtpassword");
+const detalleCatalogo = document.getElementById("contenido");
+const crear = document.getElementById("btncrearuser");
 
+detalleCatalogo.innerHTML="";
 function verificarPasswordRepetida(usuario, repetirpassword){
     return usuario.getPassword()===repetirpassword;
 }
@@ -20,5 +23,9 @@ function crearusuario(){
 
     }
   }
+  crear.addEventListener("click",(event)=>{
+    event.preventDefault();
+    crearusuario();
+  });
 
 export {crearusuario};

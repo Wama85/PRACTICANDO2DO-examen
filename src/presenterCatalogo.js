@@ -1,19 +1,37 @@
+import { CERO,URLIMAGENES } from "./constantes.js";
+import {ejercicios} from "./dataCatalogo.js"
 import { Catalogo } from "./models/Catalogo.js";
-import { Ejercicio } from "./models/Ejercicio.js";
-import { ejercicios } from "./dataCatalogo.js";
-import { URLIMAGENES,CERO } from "./constantes.js";
-import {crearHTMLejercicios} from "./cargarVistas.js";
+const detalleCatalogo = document.getElementById("contenido");
+let catalogo= new Catalogo(ejercicios);
 
-const detalleCatalogo = document.getElementById("detallecatalogo");
-const catalogo = new Catalogo(ejercicios);
-const txtNombre = document.getElementById("txtNombre");
-const selecCategoria = document.getElementById("selecCategoria");
-const txtDetalle = document.getElementById("txtDetalle");
-const txtBuscarNombreEjer=document.getElementById("txtbuscar");
-
-
+function crearHTMLejercicios(listaEjercicios, contenedor) {
+  contenedor.innerHTML = "";
+  let ejerciciosHTML = `
+  <div id="contenidocatalogo">
+  <div id="datoscatalogo">
+      <div id="detallecatalogo">`;
+  let i=1;
+  listaEjercicios.forEach((ejercicio) => {
+    ejercicio.setId(i);
+    let imagen=URLIMAGENES+ejercicio.getImagen();
+    ejerciciosHTML += `
+        <div id="imgdetallecatalog">
+          <div id="marcoimagen">
+            <img id="imagen-ejer${ejercicio.getId()}" src=${imagen} width="150px" height="100px">
+          </div>
+        </div>
+        <div id="contenidodetallecatalogo">
+          <h3 id="ejercicio-${ejercicio.getId()}">${ejercicio.getTitulo()}</h3>
+          <p>${ejercicio.getResumen()}<span>Ver mas</span></p>
+        </div>`;
+        i++;
+  });
+  ejerciciosHTML+="</div></div></div>";
+  contenedor.innerHTML += ejerciciosHTML;
+}
+  
 function llenarEjercicios() {
-  console.log(catalogo);
+
   if (
     catalogo.verificarListaVacia() == "No se tiene ejercicios disponibles" ||
     detalleCatalogo == null
@@ -21,36 +39,10 @@ function llenarEjercicios() {
     detalleCatalogo.innerHTML += `<p>${catalogo.verificarListaVacia()}</p>`;
     return;
   }
-  crearHTMLejercicios(catalogo.convertirDeJsonAEjercicio(catalogo.getEjerciciosDelNavegador()), detalleCatalogo);
+  crearHTMLejercicios(catalogo.getEjercicios(), detalleCatalogo);
 }
 function mostrarMensajeDeAlerta(mensaje){
   alert(mensaje);
 }
-function crearjercicio() {
-  const nombre = txtNombre.value;
-  const categoria = selecCategoria.value;
-  const detalle = txtDetalle.value;
-  let ejercicio = new Ejercicio(nombre, categoria, undefined, detalle);
-  if (ejercicio.validarAtributos() == true) {
-    mostrarMensajeDeAlerta("Datos subidos correctamente");
-    catalogo.agregarEjercicio(ejercicio);
-  } else {
-    mostrarMensajeDeAlerta("Todos los campos son obligatorios");
-  }
-}
 
-function buscarEjercicioPorNombre(){
-    let nombreBuscado=txtBuscarNombreEjer.value;
-    let listaCoincidencias=catalogo.buscarPorNombre(nombreBuscado);
-    console.log(listaCoincidencias)
-    console.log(nombreBuscado)
-    if(listaCoincidencias.length==CERO){
-        mostrarMensajeDeAlerta("No se encontro el/los ejercicios");
-        detalleCatalogo.innerHTML="";
-    }
-    else
-      crearHTMLejercicios(listaCoincidencias,detalleCatalogo);
-}
-
-
-export { llenarEjercicios, crearjercicio, buscarEjercicioPorNombre};
+export { llenarEjercicios, crearjercicio, buscarEjercicioPorNombre, crearHTMLejercicios,catalogo};

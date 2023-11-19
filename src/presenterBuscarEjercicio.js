@@ -1,16 +1,17 @@
-import {Catalogo} from "./models/Catalogo.js";
-import {crearHTMLejercicios} from "./cargarVistas.js"
 import { CERO } from "./constantes";
-catalogo= new Catalogo();
+import { crearHTMLejercicios,catalogo } from "./presenterCatalogo";
 const txtbuscar=document.getElementById("txtbuscar");
 const txtBuscarNombreEjer=document.getElementById("txtbuscar");
 const detalleCatalogo = document.getElementById("contenido");
 detalleCatalogo.innerHTML="";
+// let catalogo= new Catalogo(ejercicios);
 
 txtbuscar.addEventListener("keypress",(env)=>{
     if(env.key=="Enter"){
       env.preventDefault();
+    console.log(catalogo);
       buscarEjercicioPorNombre();
+
     }
      
   });
