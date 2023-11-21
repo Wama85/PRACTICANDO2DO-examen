@@ -34,7 +34,7 @@ class Catalogo{
     convertirDeJsonAEjercicio(listaJson){
         let listaEjercicios=[]
         listaJson.forEach((ejercicio) => {
-            listaEjercicios.push(new Ejercicio(ejercicio.titulo,ejercicio.categoria,ejercicio.imagen,ejercicio.resumen,ejercicio.detalle,ejercicio.id));
+            listaEjercicios.push(new Ejercicio(ejercicio.titulo,ejercicio.categoria,ejercicio.imagen,ejercicio.resumen,ejercicio.detalle,ejercicio.id,ejercicio.dificultad));
         });
         return listaEjercicios;
     }
