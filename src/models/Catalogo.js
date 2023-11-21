@@ -1,5 +1,4 @@
 import { Ejercicio } from "./Ejercicio";
-import { ejerciciosPruebas } from "../constantes";
 
 class Catalogo{
     constructor(lista=[]){
