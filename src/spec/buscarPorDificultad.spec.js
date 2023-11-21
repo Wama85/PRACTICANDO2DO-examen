@@ -19,7 +19,13 @@ describe("Buscar ejercicios por dificultad", () => {
     it("Devuelve la lista vacia sin coincidencias de dificultad", () => {
       let catalogo=new Catalogo();
       expect(catalogo.buscarEjerciosPorDificultad()).toEqual([]);
-    });    
+    }); 
+
+    it("Devuelve una coincidencia de ejercicio por dificultad ALTA", () => {
+      let catalogo=new Catalogo([ejerciciosPruebas[0]]);
+      expect(catalogo.buscarEjerciosPorDificultad("ALTA")).toEqual([ejerciciosPruebas[0]]);
+  });
+ 
   }
 );
 

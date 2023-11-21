@@ -63,9 +63,8 @@ class Catalogo{
     }
 
 
-
     buscarEjerciosPorDificultad(){
-        return [];
+        return this.lista;
     }
 
 
