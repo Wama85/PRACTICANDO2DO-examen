@@ -40,5 +40,8 @@ class Ejercicio{
     validarAtributos(){
         return this.validarTitulo() && this.validarCategoria() && this.validarResumen();
     }
+    getDificultad(){
+        return "BAJA";
+    }
 }
 export  {Ejercicio};
