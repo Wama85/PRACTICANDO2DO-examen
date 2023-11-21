@@ -7,7 +7,9 @@ describe("Buscar ejecicio por categoria", () => {
     cy.get("#menubuscarejerPorCategoria").click();
   });
 
-  
+  function seleccionarCategoria(titulo){
+    cy.get("#seleccionarcategoria").select(titulo)
+  }
     it("Devuelve el titulo del encabezado buscar por categoria", () => {
    
       cy.get("#titulocatalogo").should("contain", "Buscar Ejercicios por Categoria")
@@ -15,13 +17,13 @@ describe("Buscar ejecicio por categoria", () => {
     });
     it("Devuelve el titulo del ejercicio buscado por categoria", () => {
  
-       cy.get("#seleccionarcategoria").select("Numeros")
+       seleccionarCategoria("Numeros")
       cy.get("#contenidodetallecatalogo h3").should("contain", "Numeros Primos")
       
       });
       it("Devuelve el titulo del ejercicio buscado por categoria cadena", () => {
       
-        cy.get("#seleccionarcategoria").select("Cadenas")
+        seleccionarCategoria("Cadenas")
         cy.get("#contenidodetallecatalogo h3").first().should("contain", "Inversión de cadena")
         
         });
