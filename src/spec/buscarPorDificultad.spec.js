@@ -2,15 +2,15 @@ import "jest-localstorage-mock";
 import { ejerciciosPruebas } from "../constantes";
 import { Catalogo } from "../models/Catalogo";
 import { Ejercicio } from "../models/Ejercicio";
-
+function getDificultad(ejercicio){
+    return ejercicio.getDificultad();
+}
 describe("Dificultad de ejercicios", () => {
   it("Devuelve la dificultad BAJA del ejercicio", () => {
-    let ejercicio=ejerciciosPruebas[1];
-    expect(ejercicio.getDificultad()).toEqual("BAJA");
+    expect(getDificultad(ejerciciosPruebas[1])).toEqual("BAJA");
   });   
   it("Devuelve la dificultad ALTA del ejercicio", () => {
-    let ejercicio=ejerciciosPruebas[0];
-    expect(ejercicio.getDificultad()).toEqual("ALTA");
+    expect(getDificultad(ejerciciosPruebas[0])).toEqual("ALTA");
   });    
 }
 );
@@ -24,7 +24,7 @@ describe("Buscar ejercicios por dificultad", () => {
     it("Devuelve una coincidencia de ejercicio por dificultad ALTA", () => {
       let catalogo=new Catalogo([ejerciciosPruebas[0]]);
       expect(catalogo.buscarEjerciosPorDificultad("ALTA")).toEqual([ejerciciosPruebas[0]]);
-  });
+    });
 
     it("Devuelve una coincidencia de ejercicio por dificultad MEDIA", () => {
     let catalogo=new Catalogo(ejerciciosPruebas);
