@@ -9,7 +9,8 @@
     "test": "jest --watch",
     "test-once": "jest --verbose --coverage",
     "cypress": "cypress open",
-    "cypress-run": "cypress run"
+    "cypress-run": "cypress run",
+    "dev": "npm run build && npm run start"
   },
   "author": "Wilner,Sebas,Susan,Jhoselin,perrito_salchica-gordo_bachicha",
   "license": "ISC",

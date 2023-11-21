@@ -167,3 +167,37 @@ input[type=submit]:hover{
     margin: auto;
     padding: 20px;
 }
+#imageContenidoDetalle{
+    width: 150px;
+    height: 150px;
+    background-color: #00A99D;
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 auto;
+}
+#tituloContenidoDetalle{
+    color: #B04221;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+#ordenContenidoDetalle{
+    color: #8b8635;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+#formulariobuscarcategoria{
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+#fonticonolink{
+    background-image: url(/src/img/github.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    padding-left: 38px;
+    border: none;
+    border-bottom: solid 1px #000000;
+    outline: none;
+    
+}

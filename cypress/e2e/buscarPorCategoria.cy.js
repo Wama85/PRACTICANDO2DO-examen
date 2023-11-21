@@ -7,7 +7,15 @@ describe("Buscar ejecicio por categoria", () => {
     cy.visit("/");
     cy.get("#menubuscarejerPorCategoria").click();
     cy.get("#titulocatalogo").should("contain", "Buscar Ejercicios por Categoria")
+
     });
+    it("Devuelve el titulo del ejercicio buscado por categoria", () => {
+      cy.visit("/");
+      cy.get("#menubuscarejerPorCategoria").click();
+      cy.get("#seleccionarcategoria").select("Numeros")
+      cy.get("#contenidodetallecatalogo h3").should("contain", "Numeros Primos")
+      
+      });
 
   });
 
