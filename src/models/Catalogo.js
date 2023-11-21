@@ -62,7 +62,9 @@ class Catalogo{
         return listaCoincidencias;
     }
 
-
+    buscarEjerciosPorDificultad(){
+        return [];
+    }
 
 
 };
