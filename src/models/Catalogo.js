@@ -63,8 +63,15 @@ class Catalogo{
     }
 
 
-    buscarEjerciosPorDificultad(){
-        return this.lista;
+    buscarEjerciosPorDificultad(dificultad){
+        let listaCoincidencias=[];
+        this.lista.forEach((ejer) =>{
+            if(ejer.getDificultad()==dificultad){
+               listaCoincidencias.push(ejer);
+               }
+            }
+            );
+        return listaCoincidencias;
     }
 
 

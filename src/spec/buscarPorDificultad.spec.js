@@ -25,6 +25,11 @@ describe("Buscar ejercicios por dificultad", () => {
       let catalogo=new Catalogo([ejerciciosPruebas[0]]);
       expect(catalogo.buscarEjerciosPorDificultad("ALTA")).toEqual([ejerciciosPruebas[0]]);
   });
+
+    it("Devuelve una coincidencia de ejercicio por dificultad MEDIA", () => {
+    let catalogo=new Catalogo(ejerciciosPruebas);
+    expect(catalogo.buscarEjerciosPorDificultad("MEDIA")).toEqual(ejerciciosPruebas.filter(ejer=>ejer.getDificultad()=="MEDIA"));
+  });
  
   }
 );
