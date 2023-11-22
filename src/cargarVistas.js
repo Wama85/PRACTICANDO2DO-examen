@@ -33,6 +33,8 @@ import { llenarEjercicios } from "./presenterCatalogo";
         <li><a id="menubuscarejer" href="./frmBuscarEjer.html">Buscar Ejercicio</a></li>
         <li><a id="menucrearusuario" href="./frmCrearUsuario.html">Crear Usuario</a></li>
         <li><a id="menubuscarejerPorCategoria" href="./frmBuscarEjerPorCategoria.html">Buscar Ejercicio por Categoria</a></li>
+        <li><a id="menubuscarejerPorDificultad" href="./frmBuscarEjerPorDificultad.html">Buscar Ejercicio por Dificultad</a></li>
+
     </ul>
     `;
   }

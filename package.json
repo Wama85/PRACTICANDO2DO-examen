@@ -4,8 +4,8 @@
   "description": "",
   "default": "index.html",
   "scripts": {
-    "start": "parcel index.html frmBuscarEjer.html frmCrearEjercicio.html frmCrearUsuario.html frmBuscarEjerPorCategoria.html ",
-    "build": "parcel build index.html frmBuscarEjer.html frmCrearEjercicio.html frmCrearUsuario.html frmBuscarEjerPorCategoria.html",
+    "start": "parcel index.html frmBuscarEjer.html frmCrearEjercicio.html frmCrearUsuario.html frmBuscarEjerPorCategoria.html frmBuscarEjerPorDificultad.html",
+    "build": "parcel build index.html frmBuscarEjer.html frmCrearEjercicio.html frmCrearUsuario.html frmBuscarEjerPorCategoria.html frmBuscarEjerPorDificultad.html",
     "test": "jest --watch",
     "test-once": "jest --verbose --coverage",
     "cypress": "cypress open",
