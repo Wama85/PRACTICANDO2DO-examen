@@ -16,5 +16,12 @@ it("Devuelve el titulo del ejercicio al buscar dificultad BAJA", () => {
     cy.get("#contenidodetallecatalogo h3").should("contain", "Cálculo del factorial")
     
     });
+    it("Devuelve el titulo del ejercicio al buscar dificultad ALTA", () => {
+        cy.visit("/");
+        cy.get("#menubuscarejerPorDificultad").click();
+        cy.get("#seleccionarDificultad").select("ALTA")
+        cy.get("#contenidodetallecatalogo h3").first().should("contain", "Numeros Primos")
+        
+        });
 });
 
