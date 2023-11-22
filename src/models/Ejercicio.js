@@ -50,6 +50,10 @@ class Ejercicio{
     setCategoria(nuevaCategoria){
         this.categoria=nuevaCategoria;
     }
+    setResumen(){
+        this.resumen="resumen3";
+    }
     
+
 }
 export  {Ejercicio};

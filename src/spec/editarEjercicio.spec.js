@@ -23,6 +23,11 @@ describe("Editar Ejercicio", () => {
         ejercicio.setCategoria('Arboles');
         expect(ejercicio.getCategoria()).toEqual('Arboles');
       });
+      it("Permitir modificar el resumen", () => {
+        let ejercicio=ejerciciosPruebas[1];
+        ejercicio.setResumen('resumen3');
+        expect(ejercicio.getResumen()).toEqual('resumen3');
+      });
 
   }
 );
