@@ -47,6 +47,9 @@ class Ejercicio{
     setTitulo(nuevoTitulo){
         this.titulo=nuevoTitulo ;
     }
+    setCategoria(){
+        this.categoria="Numeros";
+    }
     
 }
 export  {Ejercicio};

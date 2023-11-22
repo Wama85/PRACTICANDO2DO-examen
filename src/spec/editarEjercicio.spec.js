@@ -13,9 +13,12 @@ describe("Editar Ejercicio", () => {
         ejercicio.setTitulo('Numeros Romanos 10');
         expect(ejercicio.getTitulo()).toEqual('Numeros Romanos 10');
       });
+    it("Permitir modificar la categoría", () => {
+        let ejercicio=ejerciciosPruebas[0];
+        ejercicio.setCategoria('Numeros');
+        expect(ejercicio.getCategoria()).toEqual('Numeros');
+      });
 
-
-   
   }
 );
 
