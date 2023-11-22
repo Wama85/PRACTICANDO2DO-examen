@@ -50,8 +50,8 @@ class Ejercicio{
     setCategoria(nuevaCategoria){
         this.categoria=nuevaCategoria;
     }
-    setResumen(){
-        this.resumen="resumen3";
+    setResumen(nuevoResumen){
+        this.resumen=nuevoResumen;
     }
     
 
