@@ -25,7 +25,7 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
         <input id="botonEditar" type="submit" data-value="${ejercicio.getTitulo()}" value="Editar"> 
           <h3 id="ejercicio-${ejercicio.getId()}">${ejercicio.getTitulo()}</h3>
           <p>${ejercicio.getResumen()}<span>Ver mas</span></p>
-           <div>Categoria:<span id="categoria">${ejercicio.getCategoria()}</span></div>
+           <div>Categoria:<span id="categoria">${ejercicio.getCategoria()}<span id="dificultad"> | Dificultad:ALTA</span></span></div>
           
          
           
