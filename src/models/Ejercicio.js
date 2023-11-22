@@ -47,8 +47,8 @@ class Ejercicio{
     setTitulo(nuevoTitulo){
         this.titulo=nuevoTitulo ;
     }
-    setCategoria(){
-        this.categoria="Numeros";
+    setCategoria(nuevaCategoria){
+        this.categoria=nuevaCategoria;
     }
     
 }

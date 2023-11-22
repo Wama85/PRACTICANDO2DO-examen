@@ -18,6 +18,11 @@ describe("Editar Ejercicio", () => {
         ejercicio.setCategoria('Numeros');
         expect(ejercicio.getCategoria()).toEqual('Numeros');
       });
+      it("Permitir modificar cualquier categoría", () => {
+        let ejercicio=ejerciciosPruebas[2];
+        ejercicio.setCategoria('Arboles');
+        expect(ejercicio.getCategoria()).toEqual('Arboles');
+      });
 
   }
 );
