@@ -22,7 +22,7 @@ const data=[
     },
     {
         "titulo": "Área de un triángulo",
-        "categoria": "Geometría",
+        "categoria": "Geometria",
         "imagen": "1Ay4HLJTY1P8QePPFDRmGKifyXQt9abFC",
         "resumen": "Crea un programa que calcule el área de un triángulo a partir de la base y la altura proporcionadas por el usuario.",
         "dificultad":"MEDIA"

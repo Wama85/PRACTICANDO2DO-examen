@@ -44,10 +44,11 @@
                         <label>Categoría:</label>
                         <select name="categoria" id="selecCategoria">
 
-                            <option value="Números">Número</option>
-                            <option value="Geometría">Geometría</option>
+                            <option value="Numeros">Números</option>
+                            <option value="Geometria">Geometría</option>
                             <option value="Cadenas">Cadenas</option>
                             <option value="Juegos">Juegos</option>
+                            <option value="Salud">Salud</option>
                         </select>
                         <label>Detalle:</label>
                         <textarea id="txtDetalle" name="txtDetalle" placeholder="Ingresar el detalle del ejercicio">
@@ -68,13 +69,7 @@
 
     </div>
     <script type="module" src="./src/cargarVistas.js"></script>
-    <script>
-        const urlParametro=new URLSearchParams(window.location.search);
-        const valorTitulo=urlParametro.get('titulo');
-        document.getElementById("txtNombre").value=valorTitulo;
-        const detalleCatalogo = document.getElementById("contenido");
-        detalleCatalogo.style.display="none";
-    </script>
+    <script type="module" src="./src/presenterEditarEjercicio.js">  </script>
     <footer>
         <p>Integrantes:</p>
     </footer>
