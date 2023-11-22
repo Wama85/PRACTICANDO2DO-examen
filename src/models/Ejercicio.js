@@ -44,8 +44,8 @@ class Ejercicio{
     getDificultad(){
         return this.dificultad;
     }
-    setTitulo(){
-        this.titulo="Numeros Romanos X" ;
+    setTitulo(nuevoTitulo){
+        this.titulo=nuevoTitulo ;
     }
     
 }
