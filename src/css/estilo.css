@@ -144,6 +144,11 @@ input[type=text],input[type=password], input[type=search],select, textarea{
     margin: 10px 2px;
     resize: vertical;
 }
+#seleccionarDificultad{
+    width: 50%;
+    margin: 0 auto;
+    
+}
 textarea{
     height:150px;
 }

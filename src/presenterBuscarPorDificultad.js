@@ -14,7 +14,12 @@ cbxbuscar.addEventListener("change",(env)=>{
  
   });
 function buscarEjerciosPorDificultad(){
-    let dificultadBuscada=cbxbuscar.value;
+    let dificultadBuscada=cbxbuscar.value.trim();
+    console.log(dificultadBuscada)
+    console.log(detalleCatalogo)
+
     let listaCoincidencias=catalogo.buscarEjerciosPorDificultad(dificultadBuscada);
+    console.log(listaCoincidencias)
+
     crearHTMLejercicios(listaCoincidencias,detalleCatalogo);
 }
