@@ -1,6 +1,7 @@
 import { CERO,URLIMAGENES } from "./constantes.js";
 import {ejercicios} from "./dataCatalogo.js"
 import { Catalogo } from "./models/Catalogo.js";
+import { Ejercicio } from "./models/Ejercicio.js";
 const detalleCatalogo = document.getElementById("contenido");
 let catalogo= new Catalogo(ejercicios);
 
@@ -25,7 +26,7 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
         <input id="botonEditar" type="submit" data-value="${ejercicio.getTitulo()}" value="Editar"> 
           <h3 id="ejercicio-${ejercicio.getId()}">${ejercicio.getTitulo()}</h3>
           <p>${ejercicio.getResumen()}<span>Ver mas</span></p>
-           <div>Categoria:<span id="categoria">${ejercicio.getCategoria()}<span id="dificultad"> | Dificultad:ALTA</span></span></div>
+           <div>Categoria:<span id="categoria">${ejercicio.getCategoria()}<span id="dificultad"> | Dificultad:${ejercicio.getDificultad()}</span></span></div>
           
          
           

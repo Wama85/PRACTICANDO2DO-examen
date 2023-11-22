@@ -22,4 +22,11 @@ describe("Ver catalogo de ejercicio detallado", () => {
         .next("div").get("#dificultad").should("contain", "ALTA");
       
     });
+    it("Se previsualiza la dificultad del Ejercicio de Calculadora de IMC",()=>{
+        cy.visit("/");
+        cy.get("#menucatalogo").click();
+        cy.get("#ejercicio-9 + p")
+        .next("div").find("#dificultad").should("contain", "MEDIA");
+      
+    });
   });
