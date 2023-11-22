@@ -1,6 +1,7 @@
 import { ejerciciosPruebas } from "../constantes";
 import {Ejercicio} from "../models/Ejercicio";
-
+import { Catalogo } from "../models/Catalogo.js";
+import "jest-localstorage-mock";
 describe("Editar Ejercicio", () => {
 
     it("Permitir modificar el título", () => {
@@ -28,9 +29,22 @@ describe("Editar Ejercicio", () => {
         ejercicio.setResumen('resumen4');
         expect(ejercicio.getResumen()).toEqual('resumen4');
       });
-
   }
 );
+
+describe("Editar Ejercicio del Catálogo", () => {
+
+    it("Edita el titulo del ejercicio numero primos", () => {
+      let catalogo=new Catalogo(ejerciciosPruebas);
+      let ejercicio=catalogo.buscarPorNombre("Numeros Primos")[0];
+      ejercicio.setTitulo('Numeros Romanos 10');
+      expect(ejercicio.getTitulo()).toEqual('Numeros Romanos 10');
+    });
+ 
+    
+  }
+);
+
 
 
 
