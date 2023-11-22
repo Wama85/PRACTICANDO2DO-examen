@@ -21,8 +21,15 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
           </div>
         </div>
         <div id="contenidodetallecatalogo">
+     
+        <input id="botonEditar" type="submit" data-value="${ejercicio.getTitulo()}" value="Editar"> 
           <h3 id="ejercicio-${ejercicio.getId()}">${ejercicio.getTitulo()}</h3>
           <p>${ejercicio.getResumen()}<span>Ver mas</span></p>
+           
+          
+         
+          
+
         </div>`;
         i++;
   });

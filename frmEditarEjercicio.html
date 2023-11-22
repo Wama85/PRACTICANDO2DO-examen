@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="module" src="./src/cargarVistas.js"></script> -->
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster">
+    <title>TDD-Genius</title>
+</head>
+
+<body>
+    <img id="imagenIni" src="./src/img/logo.png" alt="" height="150px" hidden>
+    <img id="imagenCasita" src="./src/img/home.png" alt="" height="150px" hidden>
+
+    <div id="contCabecera">
+
+
+    </div>
+    <div id="cuerpo">
+        <div id="menulateral">
+            
+        </div>
+        <div id="allcontenido">
+            <div id="ubicacion">Estas aquí:<span><a href="#">Inicio</a></span> /<span> <a
+                        href="index.html"></a>Editar Ejercicio</span> </div>
+            <!-- Mostramos el contenido detallado de la lista de catálogos-->
+
+
+            <div id="titulocatalogo">Editar Ejercicio</div>
+            <!--Mostramos buscar-->
+ 
+            <div id="contenido">
+
+            </div>
+            <div id="formularioejercicio">
+                <!-- <<div id="titulocatalogo">FORMULARIO PARA CREAR EJERCICIO</div> --> 
+              
+                <div id="formulariocategoria">
+                    <form>
+                        <label>Nombre:</label>
+                        <input type="text" placeholder="Nombre de ejercicio" id="txtNombre">
+                        <label>Categoría:</label>
+                        <select name="categoria" id="selecCategoria">
+
+                            <option value="Números">Número</option>
+                            <option value="Geometría">Geometría</option>
+                            <option value="Cadenas">Cadenas</option>
+                            <option value="Juegos">Juegos</option>
+                        </select>
+                        <label>Detalle:</label>
+                        <textarea id="txtDetalle" name="txtDetalle" placeholder="Ingresar el detalle del ejercicio">
+
+    </textarea>
+                        <input type="submit" id="editarregistro" value="Editar">
+
+                    </form>
+                </div>
+
+
+            </div>
+           
+           
+
+
+        </div>
+
+    </div>
+    <script type="module" src="./src/cargarVistas.js"></script>
+    <script>
+        const urlParametro=new URLSearchParams(window.location.search);
+        const valorTitulo=urlParametro.get('titulo');
+        document.getElementById("txtNombre").value=valorTitulo;
+        const detalleCatalogo = document.getElementById("contenido");
+        detalleCatalogo.style.display="none";
+    </script>
+    <footer>
+        <p>Integrantes:</p>
+    </footer>
+ 
+</body>
+
+</html>
